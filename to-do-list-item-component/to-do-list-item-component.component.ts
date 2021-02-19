@@ -6,7 +6,7 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./to-do-list-item-component.component.css']
 })
 export class ToDoListItemComponentComponent implements OnInit {
-  @Input() userForChildInput: string;
+  @Input() itemUpdate: string;
   constructor() { }
 
   ngOnInit(): void {
