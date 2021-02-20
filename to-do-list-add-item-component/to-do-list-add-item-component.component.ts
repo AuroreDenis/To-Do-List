@@ -8,15 +8,16 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class ToDoListAddItemComponentComponent implements OnInit {
 
   @Output() eventAddBouton = new EventEmitter<string>();
-
+  OnRecupere: string;
+  
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  // tslint:disable-next-line:typedef
+  // tslint:disable-next-line:typed typedef
   ajouterDepuisAdd() {
-    console.log('ça fonctionne');
+    console.log(this.OnRecupere);
     this.eventAddBouton.emit('Add parle à la to do list');
   }
 }
