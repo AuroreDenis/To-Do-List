@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-to-do-list-add-item-component',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToDoListAddItemComponentComponent implements OnInit {
 
+  @Output() eventAddBouton = new EventEmitter<string>();
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  // tslint:disable-next-line:typedef
+  ajouterDepuisAdd() {
+    console.log('ça fonctionne');
+    this.eventAddBouton.emit('Add parle à la to do list');
+  }
 }
