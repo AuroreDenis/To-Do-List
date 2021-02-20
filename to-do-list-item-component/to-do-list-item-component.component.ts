@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-to-do-list-item-component',
@@ -7,9 +7,15 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class ToDoListItemComponentComponent implements OnInit {
   @Input() itemUpdate: string;
+  @Input() indexUser;
+  @Output() supprimerValeuOutput = new EventEmitter<number>();
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  supprimerItemToDoList(): void {{
+      this.supprimerValeuOutput.emit(this.indexUser);
+    }
+  }
 }

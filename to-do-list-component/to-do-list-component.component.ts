@@ -25,4 +25,8 @@ export class ToDoListComponentComponent implements OnInit {
   ajouterAlaToDoList(item: string){ //fonction qui ajoute l'item à la to-do-list
     this.listItem.push(item);
   }
+
+  supprimerValeurToDoList(indexOutput: number): void {
+    this.listItem.splice(indexOutput, 1);
+  }
 }

@@ -1,9 +1,11 @@
 
 <h3> To Do List </h3>
 
-<app-to-do-list-add-item-component (eventAddBouton)="addTeParle($event)">  </app-to-do-list-add-item-component>
+<app-to-do-list-add-item-component (eventAddBouton)="addTeParle($event)" >  </app-to-do-list-add-item-component>
 
-<div  *ngFor="let item of listItem">
-<app-to-do-list-item-component [itemUpdate]="item"> </app-to-do-list-item-component>
+<div  *ngFor="let item of listItem let indexValue = index">
+<app-to-do-list-item-component [itemUpdate]="item"
+                               [indexUser]="indexValue"
+(supprimerValeuOutput)="supprimerValeurToDoList($event)"> </app-to-do-list-item-component>
 </div>
 <app-to-do-list-detail-component></app-to-do-list-detail-component>
