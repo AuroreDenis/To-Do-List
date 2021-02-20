@@ -6,6 +6,7 @@
 <div  *ngFor="let item of listItem let indexValue = index">
 <app-to-do-list-item-component [itemUpdate]="item"
                                [indexUser]="indexValue"
-(supprimerValeuOutput)="supprimerValeurToDoList($event)"> </app-to-do-list-item-component>
+                               (selectUserOutput)="handleSelectUser($event)"
+                               (supprimerValeuOutput)="supprimerValeurToDoList($event)"> </app-to-do-list-item-component>
 </div>
-<app-to-do-list-detail-component></app-to-do-list-detail-component>
+<app-to-do-list-detail-component [userSelectedInput]="userSelected"></app-to-do-list-detail-component>

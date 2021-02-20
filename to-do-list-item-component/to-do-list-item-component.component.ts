@@ -9,13 +9,19 @@ export class ToDoListItemComponentComponent implements OnInit {
   @Input() itemUpdate: string;
   @Input() indexUser;
   @Output() supprimerValeuOutput = new EventEmitter<number>();
+  @Output() selectUserOutput = new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  supprimerItemToDoList(): void {{
+
+  supprimerItemToDoList(): void {
       this.supprimerValeuOutput.emit(this.indexUser);
-    }
+  }
+
+  handleSelectUser(): void {
+    this.selectUserOutput.emit(this.indexUser);
   }
 }

@@ -9,6 +9,7 @@ export class ToDoListComponentComponent implements OnInit {
 
   listItem = ['je', 'myself', 'I'];
 
+  userSelected: string;
   constructor() { }
 
   ngOnInit(): void {
@@ -28,5 +29,9 @@ export class ToDoListComponentComponent implements OnInit {
 
   supprimerValeurToDoList(indexOutput: number): void {
     this.listItem.splice(indexOutput, 1);
+  }
+
+  handleSelectUser(indexValueToSelect): void {
+    this.userSelected = this.listItem[indexValueToSelect];
   }
 }
