@@ -1,7 +1,7 @@
 
 <h3> To Do List </h3>
 
-<app-to-do-list-add-item-component>  </app-to-do-list-add-item-component>
+<app-to-do-list-add-item-component (eventAddBouton)="addTeParle($event)">  </app-to-do-list-add-item-component>
 
 <div  *ngFor="let item of listItem">
 <app-to-do-list-item-component [itemUpdate]="item"> </app-to-do-list-item-component>

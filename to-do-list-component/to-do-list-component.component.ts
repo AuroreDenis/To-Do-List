@@ -14,4 +14,10 @@ export class ToDoListComponentComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // tslint:disable-next-line:typedef
+  addTeParle(message: string){
+    console.log(message + ' ici on est dans la to do list !')
+
+  }
+
 }
