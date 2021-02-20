@@ -9,7 +9,7 @@ export class ToDoListAddItemComponentComponent implements OnInit {
 
   @Output() eventAddBouton = new EventEmitter<string>();
   OnRecupere: string;
-  
+
   constructor() { }
 
   ngOnInit(): void {
@@ -17,7 +17,6 @@ export class ToDoListAddItemComponentComponent implements OnInit {
 
   // tslint:disable-next-line:typed typedef
   ajouterDepuisAdd() {
-    console.log(this.OnRecupere);
-    this.eventAddBouton.emit('Add parle à la to do list');
+    this.eventAddBouton.emit(this.OnRecupere); //on récupère le texte entré dans le Input et on l'envoie au parent
   }
 }

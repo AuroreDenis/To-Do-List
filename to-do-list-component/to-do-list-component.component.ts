@@ -16,8 +16,13 @@ export class ToDoListComponentComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   addTeParle(message: string){
-    console.log(message + ' ici on est dans la to do list !')
+    console.log(message);
+    this.ajouterAlaToDoList(message);
 
   }
 
+  // tslint:disable-next-line:typedef
+  ajouterAlaToDoList(item: string){ //fonction qui ajoute l'item à la to-do-list
+    this.listItem.push(item);
+  }
 }
