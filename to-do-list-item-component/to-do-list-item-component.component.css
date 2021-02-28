@@ -1,0 +1,26 @@
+button{
+
+
+  --bleu-prusse: hsla(201, 100%, 14%, 1);
+  --max-red: hsla(0, 69%, 50%, 1);
+  --orange: hsla(31, 100%, 48%, 1);
+  --max-yellow: hsla(40, 97%, 64%, 1);
+  --meringue: hsla(51, 55%, 82%, 1);
+
+  background-color: var(--max-red);
+  color: var(--max-yellow);
+
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  display: block;
+  border-radius: 8px;
+  font-size: 15px;
+
+
+}
+
+
+.item{
+  text-align: center;
+}

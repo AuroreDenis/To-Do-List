@@ -15,23 +15,20 @@ export class ToDoListComponentComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // tslint:disable-next-line:typedef
-  addTeParle(message: string){
+  addTeParle(message: string): void{
     console.log(message);
     this.ajouterAlaToDoList(message);
-
   }
 
-  // tslint:disable-next-line:typedef
-  ajouterAlaToDoList(item: string){ //fonction qui ajoute l'item à la to-do-list
+  ajouterAlaToDoList(item: string): void{ //fonction qui ajoute l'item à la to-do-list
     this.listItem.push(item);
   }
 
-  supprimerValeurToDoList(indexOutput: number): void {
+  supprimerValeurToDoList(indexOutput: number): void { // fonction qui supprime
     this.listItem.splice(indexOutput, 1);
   }
 
-  handleSelectUser(indexValueToSelect): void {
+  handleSelectUser(indexValueToSelect): void { //fonction qui sélectionne et affiche détail
     this.userSelected = this.listItem[indexValueToSelect];
   }
 }

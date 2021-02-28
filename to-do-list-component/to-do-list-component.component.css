@@ -1,0 +1,22 @@
+
+
+#titre{
+
+  --bleu-prusse: hsla(201, 100%, 14%, 1);
+  --max-red: hsla(0, 69%, 50%, 1);
+  --orange: hsla(31, 100%, 48%, 1);
+  --max-yellow: hsla(40, 97%, 64%, 1);
+  --meringue: hsla(51, 55%, 82%, 1);
+
+  color: var(--bleu-prusse);
+  border:1px double var(--bleu-prusse);
+  border-radius: 7px;
+
+  text-align: center;
+margin-left: 200px;
+  margin-right: 200px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+
+
+}
